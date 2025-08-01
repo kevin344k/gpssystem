@@ -3,10 +3,11 @@ import React from "react";
 const PhoneMockup = ({ image }) => {
   return (
     <svg
-      width="250"
+      width="190"
       height="320"
       viewBox="0 0 250 500"
       xmlns="http://www.w3.org/2000/svg"
+      className="shrink-0"
     >
       {/* Marco del teléfono */}
       <rect

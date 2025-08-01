@@ -10,7 +10,7 @@ export default function Hero() {
     <section>
     
       <div className="relative mt-20 flex items-center justify-center">
-        <div className="absolute -top-10 z-0 right-35">
+        <div className="absolute -top-10 z-0 right-45">
           <PhoneMockup image={image_maps} />
         </div>
 
@@ -19,7 +19,7 @@ export default function Hero() {
           <img className="w-45 " src={logo_vertical} alt="" />
      
         </div>
-        <div className="absolute  z-10 w-fit -top-10 left-35">
+        <div className="absolute  z-10 w-fit -top-10 left-50">
           {" "}
           <PhoneMockup image={image_notifications} />
         </div>

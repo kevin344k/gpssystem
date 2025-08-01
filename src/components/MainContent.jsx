@@ -2,10 +2,14 @@ import React from "react";
 import autos_gps from "../assets/images/autos.jpg";
 import image_notifications from "../assets/images/image_notifications.jpg";
 import image_maps from "../assets/images/image_maps.jpg";
+import playstore from "../assets/images/playstore.png";
+import logo_app from "../assets/images/logo_app.webp";
+import gps_screenshot from "../assets/images/gps_screenshot.webp";
+
 import PhoneMockup from "./PhoneMockup";
 export default function MainContent() {
   return (
-    <main className="mt-12">
+    <main className="mt-12 p-4">
       {/**tcenologia */}
       <div>
         {" "}
@@ -54,63 +58,86 @@ export default function MainContent() {
             de la instalación y configuración de nuestros dispositivos
           </p>
         </div>
-        <div className="flex flex-col gap-12 pl-4">
-        
-            <div>
-              <div className="flex gap-6 items-center bg-gradient-to-r from-new-secondary-yellow-soft/30 to-transparent rounded-tl-full rounded-bl-full">
-                <div className="bg-secondary-yelloy w-15 flex h-9 items-center justify-center py-2 rounded-full ">
-                  <p className="font-bold text-white">01</p>
-                </div>
-                <p className="text-new-blue-strong font-bold  text-md">
-                  Notificaciones
-                </p>
+        <div className="flex flex-col gap-12 ">
+          <div>
+            <div className="flex gap-6 items-center bg-gradient-to-r from-new-secondary-yellow-soft/30 to-transparent rounded-tl-full rounded-bl-full">
+              <div className="bg-secondary-yelloy w-15 flex h-9 items-center justify-center py-2 rounded-full ">
+                <p className="font-bold text-white">01</p>
               </div>
-              <div className="pl-15">
-                <p className="text-sm my-3 text-new-gray-text">
-                  Contamos con notificaciones push directamente al whatsapp de
-                  los usuarios seleccionados
-                </p>
-                <div className=" flex items-center gap-6">
-                  <PhoneMockup image={image_notifications} />
-                  <div className=" flex flex-col items-center gap-4 justify-center ">
-                    <p className="block p-2 py-0 self-start text-center items-center  shadow-md text-2xl bg-neutral-100 text-neutral-400 rounded-full">
-                      +
-                    </p>
-                    <p className="text-xs text-new-gray-text">
-                      El historial del recorrido del vehículo <br></br> tambien
-                      queda registrado
-                    </p>
-                  </div>
+              <p className="text-new-blue-strong font-bold  text-md">
+                Notificaciones
+              </p>
+            </div>
+            <div className="">
+              <p className="text-sm my-3 text-new-gray-text">
+                Contamos con notificaciones push directamente al whatsapp de los
+                usuarios seleccionados
+              </p>
+              <div className=" flex items-center gap-6">
+                <PhoneMockup image={image_notifications} />
+                <div className=" flex flex-col items-center gap-4 justify-center ">
+                  <p className="block p-2 py-0 self-start text-center items-center  shadow-md text-2xl bg-neutral-100 text-neutral-400 rounded-full">
+                    +
+                  </p>
+                  <p className="text-xs text-new-gray-text">
+                    El historial del recorrido del vehículo <br></br> tambien
+                    queda registrado
+                  </p>
                 </div>
               </div>
             </div>
-            <div>
-              <div className="flex gap-6 items-center bg-gradient-to-r from-new-secondary-yellow-soft/30 to-transparent rounded-tl-full rounded-bl-full">
-                <div className="bg-secondary-yelloy w-15 flex h-9 items-center justify-center py-2 rounded-full ">
-                  <p className="font-bold text-white">02</p>
-                </div>
-                <p className="text-new-blue-strong font-bold  text-md">
-                  Geocerca
-                </p>
+          </div>
+          <div>
+            <div className="flex gap-6 items-center bg-gradient-to-r from-new-secondary-yellow-soft/30 to-transparent rounded-tl-full rounded-bl-full">
+              <div className="bg-secondary-yelloy w-15 flex h-9 items-center justify-center py-2 rounded-full ">
+                <p className="font-bold text-white">02</p>
               </div>
-              <div className="pl-15">
-                <p className="text-sm my-3 text-new-gray-text">
-                  Tambien contamos con geocercas para el vehiculo selecionado
-                </p>
-                <div className=" flex items-center gap-6">
-                  <PhoneMockup image={image_maps} />
-                  <div className=" flex flex-col items-center gap-4 justify-center ">
-                    <p className="block px-3 py-0 self-start text-center items-center  shadow-md text-2xl bg-neutral-100 text-neutral-500 rounded-full">
-                      	!
-                    </p>
-                    <p className="text-xs w-[175px] text-new-gray-text">
-                      Una geocerca es una cerca virtual o perímetro alrededor de una ubicación física. Una geocerca es una cerca virtual o perímetro alrededor de una ubicación física.
-                    </p>
-                  </div>
+              <p className="text-new-blue-strong font-bold  text-md">
+                Geocerca
+              </p>
+            </div>
+            <div className="">
+              <p className="text-sm my-3 text-new-gray-text">
+                Tambien contamos con geocercas para el vehiculo selecionado
+              </p>
+              <div className=" flex items-center ">
+                <PhoneMockup image={image_maps} />
+                <div className=" flex flex-col items-center gap-4 justify-center ">
+                  <p className="block px-3 py-0 self-start text-center items-center  shadow-md text-2xl bg-neutral-100 text-neutral-500 rounded-full">
+                    !
+                  </p>
+                  <p className="text-xs w-[175px] text-new-gray-text">
+                    Una geocerca es una cerca virtual o perímetro alrededor de
+                    una ubicación física. Una geocerca es una cerca virtual o
+                    perímetro alrededor de una ubicación física.
+                  </p>
                 </div>
               </div>
             </div>
-        
+          </div>
+        </div>
+      </div>
+      {/*nuestra app */}
+      <div className="my-16">
+        <div className="text-center p-4">
+         <div>
+             <p className="text-xl font-bold text-new-blue-strong">Nuestra App</p>
+          <p className="text-sm my-3 text-new-gray-text">
+            Nuestra app ya se encuentra disponible con una interfas muy fácil y
+            práctica de uso Par apode cuidar nuestro transporte o herramienta de
+            trabajo
+          </p>
+         </div>
+         <div className="flex flex-col items-center justify-center">
+            <div className="relative mb-8">
+                <PhoneMockup image={gps_screenshot} />
+                  <img className="absolute -bottom-5 bg-white right-0 border-1 w-25 shadow-lg border-neutral-300 rounded-2xl" src={logo_app} alt="" />
+            </div>
+           
+             <a href="https://play.google.com/store/apps/details?id=com.gpssytem.ec">
+                <img className="w-50" src={playstore} alt="" />
+             </a>
+         </div>
         </div>
       </div>
     </main>
