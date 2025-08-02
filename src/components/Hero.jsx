@@ -7,7 +7,7 @@ import PhoneMockup from "./PhoneMockup";
 import ButContactar from "./ButContactar";
 export default function Hero() {
   return (
-    <section>
+    <section id="hero">
     
       <div className="relative mt-20 flex items-center justify-center">
         <div className="absolute -top-10 z-0 right-45">
@@ -25,14 +25,16 @@ export default function Hero() {
         </div>
       </div>
         <div className="mt-8 flex flex-col items-center justify-center">
-        <p className="text-new-blue-strong text-center font-bold text-3xl font-be-vietnana-pro">
+        <p className="text-new-blue-strong text-center font-bold text-3xl md:text-4xl font-be-vietnana-pro">
            GPSSYSTEM
         </p>
         <p className="text-center mt-4 text-lg text-new-gray-text">
             Siéntete seguro al transitar con tu vehículo y mantenerlo siempre a tu
           alcance.
         </p>
-        <ButContactar></ButContactar>
+       <div className="mt-6">
+         <ButContactar></ButContactar>
+       </div>
       </div>
     </section>
   );

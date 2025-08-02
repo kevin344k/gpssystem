@@ -5,22 +5,23 @@ import image_maps from "../assets/images/image_maps.jpg";
 import playstore from "../assets/images/playstore.png";
 import logo_app from "../assets/images/logo_app.webp";
 import gps_screenshot from "../assets/images/gps_screenshot.webp";
-
+import image_full_logo from "../assets/images/complete_logo_with_bg_solid.png";
 import PhoneMockup from "./PhoneMockup";
+import ButContactar from "./ButContactar";
 export default function MainContent() {
   return (
-    <main className="mt-12 p-4">
+    <main className="mt-12 md:mt-25">
       {/**tcenologia */}
-      <div>
+      <div id="tecnologia ">
         {" "}
-        <div className="text-center">
+        <div className="text-center  md:max-w-[500px] md:m-auto">
           <p className="text-xl font-bold text-new-blue-strong">Tecnologia</p>
-          <p className="mt-4 leading-relaxed text-sm text-new-gray-text">
+          <p className="mt-4 leading-relaxed text-sm text-new-gray-text md:text-md">
             Actualmente la tecnología se encuentra al alcance de todos nosotros.
             Lo importante es saber darle el uso necesario a nuestra conveniencia
           </p>
         </div>
-        <div className="flex flex-col items-center gap-12 my-6">
+        <div className="flex flex-col items-center gap-12 my-6 md:flex-row md:justify-center md:mt-12">
           <div className=" max-w-[300px] relative py-6 px-4 border border-neutral-100 shadow-lg rounded-md text-center">
             <p className="absolute font-bold text-new-blue-strong bg-new-secondary-yellow-soft/30 p-1 px-3 top-2 rounded-full right-4  ">
               Autos
@@ -48,8 +49,8 @@ export default function MainContent() {
         </div>
       </div>
       {/*servicios */}
-      <div>
-        <div className="p-4  my-12 text-center">
+      <div id="servicios" className="pl-3 md:mt-20">
+        <div className="p-4  my-12 text-center md:max-w-[500px] md:m-auto">
           <p className="text-new-blue-strong font-bold text-center text-xl">
             Servicios
           </p>
@@ -58,7 +59,7 @@ export default function MainContent() {
             de la instalación y configuración de nuestros dispositivos
           </p>
         </div>
-        <div className="flex flex-col gap-12 ">
+        <div className="flex flex-col gap-12 md:max-w-[500px] md:m-auto md:mt-12">
           <div>
             <div className="flex gap-6 items-center bg-gradient-to-r from-new-secondary-yellow-soft/30 to-transparent rounded-tl-full rounded-bl-full">
               <div className="bg-secondary-yelloy w-15 flex h-9 items-center justify-center py-2 rounded-full ">
@@ -68,7 +69,7 @@ export default function MainContent() {
                 Notificaciones
               </p>
             </div>
-            <div className="">
+            <div className="pl-3">
               <p className="text-sm my-3 text-new-gray-text">
                 Contamos con notificaciones push directamente al whatsapp de los
                 usuarios seleccionados
@@ -96,7 +97,7 @@ export default function MainContent() {
                 Geocerca
               </p>
             </div>
-            <div className="">
+            <div className="pl-3">
               <p className="text-sm my-3 text-new-gray-text">
                 Tambien contamos con geocercas para el vehiculo selecionado
               </p>
@@ -117,29 +118,42 @@ export default function MainContent() {
           </div>
         </div>
       </div>
+      <div className=" relative my-12">
+        <div className="inset-0 pb-20 flex justify-center items-end pb-5  absolute bottom-0 left-0">
+          <ButContactar></ButContactar>
+        </div>
+        <img src={image_full_logo} alt="" />
+      </div>
       {/*nuestra app */}
-      <div className="my-16">
-        <div className="text-center p-4">
-         <div>
-             <p className="text-xl font-bold text-new-blue-strong">Nuestra App</p>
-          <p className="text-sm my-3 text-new-gray-text">
-            Nuestra app ya se encuentra disponible con una interfas muy fácil y
-            práctica de uso Par apode cuidar nuestro transporte o herramienta de
-            trabajo
-          </p>
-         </div>
-         <div className="flex flex-col items-center justify-center">
+      <div id="nuestra-app" className="my-16">
+        <div className="text-center p-4 md:max-w-[500px] md:m-auto">
+          <div>
+            <p className="text-xl font-bold text-new-blue-strong">
+              Nuestra App
+            </p>
+            <p className="text-sm my-3 text-new-gray-text">
+              Nuestra app ya se encuentra disponible con una interfas muy fácil
+              y práctica de uso Par apode cuidar nuestro transporte o
+              herramienta de trabajo
+            </p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
             <div className="relative mb-8">
-                <PhoneMockup image={gps_screenshot} />
-                  <img className="absolute -bottom-5 bg-white right-0 border-1 w-25 shadow-lg border-neutral-300 rounded-2xl" src={logo_app} alt="" />
+              <PhoneMockup image={gps_screenshot} />
+              <img
+                className="absolute shadow-[0px_10px_15px_rgba(244,150,1,0.6)] -bottom-5 bg-white right-0 border-1 w-25  border-neutral-300 rounded-2xl"
+                src={logo_app}
+                alt=""
+              />
             </div>
-           
-             <a href="https://play.google.com/store/apps/details?id=com.gpssytem.ec">
-                <img className="w-50" src={playstore} alt="" />
-             </a>
-         </div>
+
+            <a href="https://play.google.com/store/apps/details?id=com.gpssytem.ec">
+              <img className="w-50" src={playstore} alt="" />
+            </a>
+          </div>
         </div>
       </div>
+      {/*  */}
     </main>
   );
 }
