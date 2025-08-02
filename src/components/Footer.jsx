@@ -7,7 +7,9 @@ import ButContactar from "./ButContactar";
 export default function Footer() {
   return (
     <div className="bg-new-blue-very-dark text-center pt-12 pb-3">
-      <ul className="text-white pb-4  flex flex-col gap-2 text-sm">
+<div className="flex flex-col md:justify-between md:flex-row-reverse md:max-w-[500px] lg:max-w-[900px] md:m-auto md:my-5">
+ <div className="md:flex md:gap-12 ">
+       <ul className="text-white pb-4  flex flex-col gap-4 text-sm">
         <li className="hover:text-secondary-yelloy active:text-secondary-yelloy cursor-pointer">
           <a href="#inicio">Inicio</a>
         </li>
@@ -25,7 +27,9 @@ export default function Footer() {
       <div className="mt-8 mb-12">
         <ButContactar></ButContactar>
       </div>
-      <div className="my-12 flex gap-6 justify-center items-center">
+ </div>
+<div className="md:flex md:flex-col-reverse md:items-center md:justify-start ">
+        <div className="my-5 flex gap-6 justify-center items-center md:self-auto md:mt-4">
         <a href="https://www.instagram.com/gpssystem_ec?igsh=MThmYWVvcnRmN3k2Nw==">
           {" "}
           <img className="" src={instagram} alt="" />
@@ -45,7 +49,10 @@ export default function Footer() {
         </a>
       </div>
 
-      <img className="w-40 m-auto mb-8" src={logo_horizontal} alt="" />
+      <img className="w-40 m-auto mb-8 md:mb-0" src={logo_horizontal} alt="" />
+</div>
+
+</div>
       <p className="text-xs text-neutral-400">
         2024 - GPS system ec - <a href="">Política de Privacidad</a>
       </p>

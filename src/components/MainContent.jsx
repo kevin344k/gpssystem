@@ -12,7 +12,7 @@ export default function MainContent() {
   return (
     <main className="mt-12 md:mt-25">
       {/**tcenologia */}
-      <div id="tecnologia ">
+      <div className="lg:max-w-[900px] lg:m-auto" id="tecnologia ">
         {" "}
         <div className="text-center  md:max-w-[500px] md:m-auto">
           <p className="text-xl font-bold text-new-blue-strong">Tecnologia</p>
@@ -59,7 +59,7 @@ export default function MainContent() {
             de la instalación y configuración de nuestros dispositivos
           </p>
         </div>
-        <div className="flex flex-col gap-12 md:max-w-[500px] md:m-auto md:mt-12">
+        <div className="flex flex-col gap-12 md:max-w-[500px] md:m-auto md:mt-12 lg:flex-row lg:max-w-[900px]">
           <div>
             <div className="flex gap-6 items-center bg-gradient-to-r from-new-secondary-yellow-soft/30 to-transparent rounded-tl-full rounded-bl-full">
               <div className="bg-secondary-yelloy w-15 flex h-9 items-center justify-center py-2 rounded-full ">
@@ -107,10 +107,9 @@ export default function MainContent() {
                   <p className="block px-3 py-0 self-start text-center items-center  shadow-md text-2xl bg-neutral-100 text-neutral-500 rounded-full">
                     !
                   </p>
-                  <p className="text-xs w-[175px] text-new-gray-text">
+                  <p className="text-xs  text-wrap text-new-gray-text">
                     Una geocerca es una cerca virtual o perímetro alrededor de
-                    una ubicación física. Una geocerca es una cerca virtual o
-                    perímetro alrededor de una ubicación física.
+                    una ubicación física. 
                   </p>
                 </div>
               </div>
@@ -119,10 +118,10 @@ export default function MainContent() {
         </div>
       </div>
       <div className=" relative my-12">
-        <div className="inset-0 pb-20 flex justify-center items-end pb-5  absolute bottom-0 left-0">
+        <div className="inset-0 pb-20 flex justify-center items-end pb-5  absolute bottom-0 left-0 lg:max-w-[700px] lg:m-auto">
           <ButContactar></ButContactar>
         </div>
-        <img src={image_full_logo} alt="" />
+        <img className="lg:m-auto lg:rounded-lg lg.sahdow-lg lg:max-w-[700px]" src={image_full_logo} alt="" />
       </div>
       {/*nuestra app */}
       <div id="nuestra-app" className="my-16">

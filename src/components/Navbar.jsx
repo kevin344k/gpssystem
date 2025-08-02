@@ -6,20 +6,28 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    setIsModalOpen(!isModalOpen);
-  };
+const toggleMenu = () => {
+  if (isOpen) {
+    // Si está abierto, primero animamos la salida
+    setIsOpen(false);
+    setTimeout(() => setIsModalOpen(false), 400);
+  } else {
+    // Si está cerrado, abrimos y montamos el modal
+    setIsModalOpen(true);
+    setTimeout(() => setIsOpen(true), 10); // pequeño delay para animación
+  }
+};
+
   const closeModal = () => {
     setIsOpen(false); // animación de salida
     setTimeout(() => setIsModalOpen(false), 400); // espera 400ms hasta que termine la animación
   };
 
   return (
-    <div className="m-auto p-4">
+    <div className="  ">
       <nav
         id="inicio"
-        className="flex justify-between items-center  text-white"
+        className="flex p-4 justify-between items-center  text-white lg:max-w-[900px] lg:m-auto"
       >
         <picture>
   <source srcSet={logo_gps_desktop} media="(min-width: 768px)" />
@@ -48,7 +56,7 @@ export default function Navbar() {
         </button>
 
         <div
-          className={`hidden md:flex px-12 items-center justify-center gap-12     `}
+          className={`hidden md:flex px-12 items-center justify-center gap-12   lg:px-0  `}
         >
           <ul className=" text-neutral-600  text-center flex  md:flex-row gap-4 text-md">
             <li className="relative group">
