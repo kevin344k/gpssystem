@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section id="hero">
 <div className="lg:flex lg:flex-row-reverse lg:max-w-[900px] lg:m-auto lg:justify-between ">
-        <div className="relative mt-20  flex items-center justify-center">
+        <div className="relative mt-10  flex items-center justify-center">
         <div className=" relative w-40 md:w-50 md:80 h-80  lg:mr-20   flex flex-col-reverse  items-center  bg-[url('/src/assets/images/marco_plateado2.png')] bg-contain bg-center justify-center gap-2 bg-no-repeat">
           <div className="absolute -top-[40px] -z-10 right-32 md:right-40">
             <PhoneMockup image={image_maps} width={""} />
