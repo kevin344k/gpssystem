@@ -118,7 +118,7 @@ export default function MainContent() {
         </div>
       </div>
       <div className=" relative my-12">
-        <div className="inset-0 pb-20 flex justify-center items-end pb-5  absolute bottom-0 left-0 lg:max-w-[700px] lg:m-auto">
+        <div className="inset-0 pb-10 md:pb-20 flex justify-center items-end pb-5  absolute bottom-0 left-0 lg:max-w-[700px] lg:m-auto">
           <ButContactar></ButContactar>
         </div>
         <img className="lg:m-auto lg:rounded-lg lg.sahdow-lg lg:max-w-[700px]" src={image_full_logo} alt="" />
