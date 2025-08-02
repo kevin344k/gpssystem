@@ -5,29 +5,14 @@ import ButContactar from "./ButContactar";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const toggleMenu = () => {
-    if (isOpen) {
-      // Animación de salida
-      setIsOpen(false);
-      setTimeout(() => setIsModalOpen(false), 400);
-    } else {
-      // Monta el modal y luego ejecuta la animación
-      setIsModalOpen(true);
-      requestAnimationFrame(() => setIsOpen(true));
-    }
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-    setTimeout(() => setIsModalOpen(false), 400);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeModal = () => setIsOpen(false);
 
   // Bloquear scroll cuando el modal está abierto
   useEffect(() => {
-    document.body.style.overflow = isModalOpen ? "hidden" : "";
-  }, [isModalOpen]);
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  }, [isOpen]);
 
   return (
     <div>
@@ -80,32 +65,34 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Modal Mobile */}
-        {isModalOpen && (
-          <div className="fixed inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-start justify-center z-40">
-            <div
-              className={`bg-white w-70 p-6 mt-20 rounded-xl shadow-lg relative ${
-                isOpen ? "animate-slide-down" : "animate-slide-up"
-              }`}
-            >
-              <ul className="pt-12 pb-4 text-center flex flex-col gap-4 text-md">
-                {["inicio", "tecnologia", "servicios", "nuestra-app"].map((item) => (
-                  <li
-                    key={item}
-                    className="text-neutral-600 hover:text-secondary-yelloy cursor-pointer"
-                  >
-                    <a onClick={closeModal} href={`#${item}`} className="capitalize">
-                      {item.replace("-", " ")}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              <div className="my-3 flex items-center justify-center">
-                <ButContactar />
-              </div>
+        {/* Modal Mobile SIEMPRE MONTADO */}
+        <div
+          className={`fixed inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-start justify-center z-40 transition-all duration-300 ${
+            isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
+        >
+          <div
+            className={`bg-white w-70 p-6 mt-20 rounded-xl shadow-lg relative transform transition-transform duration-300 ${
+              isOpen ? "translate-y-0" : "-translate-y-full"
+            }`}
+          >
+            <ul className="pt-12 pb-4 text-center flex flex-col gap-4 text-md">
+              {["inicio", "tecnologia", "servicios", "nuestra-app"].map((item) => (
+                <li
+                  key={item}
+                  className="text-neutral-600 hover:text-secondary-yelloy cursor-pointer"
+                >
+                  <a onClick={closeModal} href={`#${item}`} className="capitalize">
+                    {item.replace("-", " ")}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <div className="my-3 flex items-center justify-center">
+              <ButContactar />
             </div>
           </div>
-        )}
+        </div>
       </nav>
     </div>
   );
